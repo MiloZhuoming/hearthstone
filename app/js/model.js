@@ -233,6 +233,10 @@ this.SetHero = function(type){
  this.GetHero = function(){
     return heroType;
  }
+  this.ShowProgress= function(flag){
+  console.log(flag);
+  return flag;
+ }
 
  this.AddCardToDeck = function(card){
   var cardAlreadyInDeck = false;
