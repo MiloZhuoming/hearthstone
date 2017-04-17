@@ -130,16 +130,13 @@ $scope.costFilter = function(cost,cards) {
 
      Hearthstone.DeleteCardFromDeck(cardId);
      Hearthstone.SetProgress();
+     $scope.progressBars = Hearthstone.GetProgress();
+     $scope.progressFlag=($scope.progressFlag+1)%2;
+     Hearthstone.ShowProgress($scope.progressFlag);
     // $scope.progressBars = Hearthstone.GetProgress();
     }
 
   $scope.selectedCards = Hearthstone.GetDeck();
-    
-  $scope.progressBars = Hearthstone.GetProgress();
-
-  
-
-
 
 
 });
